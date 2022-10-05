@@ -22,7 +22,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav w-100 justify-content-between">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a>
+            <a class="nav-link" href="inicio.html">Inicio</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="categories.html">Categorías</a>
@@ -31,6 +31,7 @@
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" id="local" href="#"></a>
           </li>
         </ul>
       </div>
@@ -38,10 +39,45 @@
   </nav>
   <main>
     <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+      <div id="infoProducts" class="carousel slide" data-bs-ride="carousel">
       </div>
-    </div>
+      <h3 class="text-start">Comentarios</h3>
+      <div id="containComments">
+      </div>
+      <div class="text-start">
+        <div class="fs-3">Comentar
+        </div>
+        <br>
+        <div class="fs-5">Tu opinión:
+        </div>
+        <div class="form-floating">
+          <textarea class="textArea col-6" id="floatingTextarea2"></textarea>
+          <label for="floatingTextarea2"></label>
+        </div>
+        <br>
+        <div class="fs-6">Tu puntuación
+        </div>
+        <br>
+        <div class="options col-3">
+          <select class="form-select" id="floatingSelect">
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          <label for="floatingSelect"></label>
+        </div>
+        <br>
+        <button type="button" id="btn" class="btn btn-primary">Enviar</button>
+      </div>
+      <br>
+      <hr>
+      <div class="fs-3 text-start">Productos relacionados
+      </div>
+
+      <div class="row" id="relatedProducts">
+      </div>
   </main>
   <footer class="text-muted">
     <div class="container">
