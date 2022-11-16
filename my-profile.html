@@ -45,18 +45,83 @@
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="local" href="#"></a>
+            <div class="dropdown">
+              <a class="btn btn-dark dropdown-toggle" href="#" role="button" id="local" data-bs-toggle="dropdown"
+                aria-expanded="false">
+              </a>
+
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="cart.html">Mi carrito</a></li>
+                <li><a class="dropdown-item" href="my-profile.html">Mi perfíl</a></li>
+                <li><a class="dropdown-item" id="clearSesion" href="index.html">Cerrar sesión</a></li>
+              </ul>
+            </div>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+  <br>
   <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+    <div class="text-start container overflow-hidden">
+      <h4 class="fs-2 text-start">Perfil</h4>
+      <hr>
+      <br>
+      <div class="row col-10">
+        <div class="col-6">
+          <form action="#" id="formEnvio" method="get" class="validation" novalidate>
+            <label for="primername" class="form-label text-muted fs-5">Primer nombre *</label>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" required minlength="2" placeholder="Ingrése su primer nombre" id="primername"
+                aria-describedby="basic-addon3">
+              <div class="valid-feedback">Success!</div>
+              <div class="invalid-feedback">Campo obligatorio!</div>
+            </div>
+        </div>
+        <div class="col-6">
+          <label for="segundoname" class="form-label text-muted fs-5">Segundo nombre</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" minlength="2" placeholder="Ingrése su segundo nombre" id="segundoname"
+              aria-describedby="basic-addon3">
+          </div>
+        </div>
+        <div class="col-6">
+          <label for="primerap" class="form-label text-muted fs-5">Primer apellido *</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" required minlength="2" placeholder="Ingrése su primer apellido" id="primerap"
+              aria-describedby="basic-addon3">
+            <div class="valid-feedback">Success!</div>
+            <div class="invalid-feedback">Campo obligatorio!</div>
+          </div>
+        </div>
+        <div class="col-6">
+          <label for="segundoap" class="form-label text-muted fs-5">Segundo apellido</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" minlength="2" placeholder="Ingrése su segundo apellido" id="segundoap"
+              aria-describedby="basic-addon3">
+          </div>
+        </div>
+        <div class="col-6">
+          <label for="correo" class="form-label text-muted fs-5">Email *</label>
+          <div class="input-group mb-3">
+            <input type="email" name="email" class="form-control" required placeholder="ejemplo@mail.com" id="correo"
+              aria-describedby="basic-addon3">
+            <div class="valid-feedback">Success!</div>
+            <div class="invalid-feedback">Campo obligatorio!</div>
+          </div>
+        </div>
+        <div class="col-6">
+          <label for="Tel" class="form-label text-muted fs-5">Teléfono de contacto *</label>
+          <div class="input-group mb-3">
+            <input type="tel" class="form-control" required placeholder="090000000"  minlength="9" id="Tel" aria-describedby="basic-addon3">
+          </div>
+        </div>
       </div>
-    </div>
+      </form>
+      <br>
+      <br>
+      <hr>
+      <button type="button" id="btnSaveProfile" class="btn btn btn-dark">Guardar cambios</button>
   </main>
   <footer class="text-muted">
     <div class="container">
